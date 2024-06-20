@@ -1,8 +1,8 @@
-package javafx.myjavafxproject;
+package meowmeowmeow;
 
 
 
-
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.stream.IntStream;
@@ -17,7 +17,8 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
-
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
@@ -64,6 +65,7 @@ public class DogsInvaders extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        music();
 
         Canvas canvas = new Canvas(WIDTH, HEIGHT);
         gc = canvas.getGraphicsContext2D();
@@ -91,7 +93,13 @@ public class DogsInvaders extends Application {
         stage.show();
 
     }
-
+    MediaPlayer mediaPlayer;
+    public void music() {
+        String s = getClass().getResource("/v12044gd0000cndbrffog65r9g0dvvk0.mp3").toExternalForm();
+        Media h = new Media(Paths.get(s).toUri().toString());
+        mediaPlayer = new MediaPlayer(h);
+        mediaPlayer.play();
+    }
 
 
 
