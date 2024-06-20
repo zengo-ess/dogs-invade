@@ -1,4 +1,4 @@
-package meowmeowmeow;
+package javafx.myjavafxproject;
 
 
 
@@ -95,7 +95,7 @@ public class DogsInvaders extends Application {
     }
     MediaPlayer mediaPlayer;
     public void music() {
-        String s = getClass().getResource("/v12044gd0000cndbrffog65r9g0dvvk0.mp3").toExternalForm();
+        String s = getClass().getResource("/music.mp3").toExternalForm();
         Media h = new Media(Paths.get(s).toUri().toString());
         mediaPlayer = new MediaPlayer(h);
         mediaPlayer.play();
