@@ -95,7 +95,8 @@ public class DogsInvaders extends Application {
     }
     MediaPlayer mediaPlayer;
     public void music() {
-        String s = getClass().getResource("/music.mp3").toExternalForm();
+        String s = "res/music.mp3";
+//        String s = getClass().getResource("/music.mp3").toExternalForm();
         Media h = new Media(Paths.get(s).toUri().toString());
         mediaPlayer = new MediaPlayer(h);
         mediaPlayer.play();
